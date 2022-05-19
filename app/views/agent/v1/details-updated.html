@@ -1,0 +1,152 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Bank details updated
+{% endblock %}
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Manage citizen contact
+      </a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs">
+<ol class="govuk-breadcrumbs__list">
+  <li class="govuk-breadcrumbs__list-item">
+    <a class="govuk-breadcrumbs__link" href="/agent/v1/history">Citizen history</a>
+  </li>
+  <li class="govuk-breadcrumbs__list-item">
+    <a class="govuk-breadcrumbs__link" href="javascript:window.history.back()">Update</a>
+  </li>
+  <li class="govuk-breadcrumbs__list-item">
+    <a class="govuk-breadcrumbs__link">details updated</a>
+  </li>
+</ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Bank details updated</h1>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="benefits-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h1 class="govuk-fieldset__heading">Which benefits have you updated the bank details for?</h1>
+                </legend>
+                <div id="benefits-hint" class="govuk-hint">
+                  Select all that apply.
+                </div>
+                <div class="govuk-checkboxes--small" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="JSA" name="JSA" type="checkbox" value="JSA">
+                    <label class="govuk-label govuk-checkboxes__label" for="JSA">Job Seeker's Allowance (JSA)</label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="ESA" name="ESA" type="checkbox" value="ESA">
+                    <label class="govuk-label govuk-checkboxes__label" for="ESA">Employment Support Allowance (ESA)</label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="AA" name="AA" type="checkbox" value="AA">
+                    <label class="govuk-label govuk-checkboxes__label" for="AA">Attendance Allowance (AA)</label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="DLA" name="DLA" type="checkbox" value="DLA">
+                    <label class="govuk-label govuk-checkboxes__label" for="DLA">Disability Living Allowance (DLA)</label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="RP" name="RP" type="checkbox" value="RP">
+                    <label class="govuk-label govuk-checkboxes__label" for="RP">Retirement Pension (RP)	</label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="IB" name="IB" type="checkbox" value="IB">
+                    <label class="govuk-label govuk-checkboxes__label" for="IB">Incapacity Benefit (IB)	</label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="PIP" name="PIP" type="checkbox" value="PIP">
+                    <label class="govuk-label govuk-checkboxes__label" for="PIP">Personal Independent Payment (PIP)	</label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="SP" name="SP" type="checkbox" value="SP">
+                    <label class="govuk-label govuk-checkboxes__label" for="SP">Seasonal Payments (SP)</label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="IS" name="IS" type="checkbox" value="IS">
+                    <label class="govuk-label govuk-checkboxes__label" for="IS">Income Support (IS)</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <h1 class="govuk-heading-m govuk-!-margin-top-8">Input bank account details.</h1>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="name-on-the-account">
+                Name on the account
+              </label>
+              <input class="govuk-input" id="name-on-the-account" name="name-on-the-account" type="text" spellcheck="false" autocomplete="name">
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="sort-code">
+                Sort code
+              </label>
+              <div id="sort-code-hint" class="govuk-hint">
+                Must be 6 digits long
+              </div>
+              <input class="govuk-input govuk-input--width-5" id="sort-code" name="sort-code" type="text" spellcheck="false" aria-describedby="sort-code-hint" pattern="[0-9]*" inputmode="numeric">
+            </div>
+
+            <div class="govuk-form-group govuk-!-margin-bottom-8">
+              <label class="govuk-label" for="account-number">
+                Account number
+              </label>
+              <div id="account-number-hint" class="govuk-hint">
+                Must be between 6 and 8 digits long
+              </div>
+              <input class="govuk-input govuk-input--width-10" id="account-number" name="account-number" type="text" spellcheck="false" aria-describedby="account-number-hint" pattern="[0-9]*" inputmode="numeric">
+            </div>
+
+            <form class="form" action="../v1/redirect" method="post">
+            <div class="govuk-form-group govuk-!-margin-bottom-8">
+              <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h1 class="govuk-fieldset__heading">Have you reissued a replacement payment to this account?</h1>
+                </legend>
+                <div id="changed-name-hint" class="govuk-hint">
+                  If yes, the system will direct you to another page to mark which of the payments you have reissued.
+                </div>
+                <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="changed-name" name="redirectUrl" type="radio" value="../v1/payment-reissued-abank">
+                    <label class="govuk-label govuk-radios__label" for="changed-name">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="changed-name-2" name="redirectUrl" type="radio" value="../v1/history-success">
+                    <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+
+            <button class="govuk-button" data-module="govuk-button">Confirm update</button>
+            </form>
+
+    </div>
+  </div>
+
+{% endblock %}

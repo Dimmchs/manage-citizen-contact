@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {# Set serviceName in config.js. #}
+  {{ govukHeader({
+    homepageUrl: "https://www.gov.uk/",
+    serviceName: "Manage citizen Contact",
+    serviceUrl: "index",
+
+    navigation: [
+    {
+      href: "",
+      text: ""
+    }
+    ]
+
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Manage citizen contact prototype
+      </h1>
+
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                Iteration 1
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+            <p class='govuk-body'>Last updated: 3 May 2022</p>
+            <p class='govuk-body'>Created: 3 May 2022</p>
+            <a href="../agent/v1/case-list" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+              View prototype
+            </a>
+          </div>
+        </div>
+{% endblock %}

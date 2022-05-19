@@ -1,0 +1,149 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home
+{% endblock %}
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Manage citizen contact
+      </a>
+
+    </div>
+  </div>
+</header>
+</div>
+
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+
+<div class="moj-search govuk-!-margin-top-6">
+
+  <form action="../v1/history" method="post">
+
+    <div class="govuk-form-group">
+      <div id="search-hint" class="govuk-hint moj-search__hint ">
+        Find someone by NINO or reference number
+      </div>
+      <input class="govuk-input" id="search" name="search" type="search" aria-describedby="search-hint">
+    </div>
+
+    <button class="govuk-button moj-search__button" data-module="govuk-button">
+      Search
+    </button>
+  </form>
+</div>
+
+</div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">Outstanding cases</h1>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Filter cases by benefit
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+  <h1 class="govuk-heading-m">Benefits</h1>
+
+  <div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="JSA" name="JSA" type="checkbox" value="JSA" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="JSA">Job Seeker's Allowance (JSA)</label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="ESA" name="ESA" type="checkbox" value="ESA" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="ESA">Employment Support Allowance (ESA)</label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="AA" name="AA" type="checkbox" value="AA" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="AA">Attendance Allowance (AA)</label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="DLA" name="DLA" type="checkbox" value="DLA" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="DLA">Disability Living Allowance (DLA)</label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="RP" name="RP" type="checkbox" value="RP" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="RP">Retirement Pension (RP)	</label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <button class="govuk-button" data-module="govuk-button">Apply filters</button>
+  </div>
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="IB" name="IB" type="checkbox" value="IB" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="IB">Incapacity Benefit (IB)	</label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="PIP" name="PIP" type="checkbox" value="PIP" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="PIP">Personal Independent Payment (PIP)	</label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="SP" name="SP" type="checkbox" value="SP" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="SP">Seasonal Payments (SP)</label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="IS" name="IS" type="checkbox" value="IS" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="IS">Income Support (IS)</label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+  </div>
+  </div>
+</details>
+
+<table class="govuk-table">
+<thead class="govuk-table__head">
+<!--<caption class="govuk-table__caption govuk-table__caption--m">The team have 56 cases to work on</caption>-->
+<tr class="govuk-table__row">
+  <th scope="col" class="govuk-table__header">Action</th>
+  <th scope="col" class="govuk-table__header govuk-!-text-align-right">Cases</th>
+  <th scope="col" class="govuk-table__header"></th>
+  <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+</tr>
+</thead>
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row">
+  <th scope="row" class="govuk-table__header">Do checks and repairs</th>
+  <td class="govuk-table__cell govuk-!-text-align-right">47</td>
+  <td class="govuk-table__cell govuk-!-text-align-centre"><strong class="govuk-tag govuk-tag--red">1 urgent</strong></td>
+  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="../v1/history-bvd">Start</a></td>
+</tr>
+<tr class="govuk-table__row">
+  <th scope="row" class="govuk-table__header">Follow up on a case</th>
+    <td class="govuk-table__cell govuk-!-text-align-right">4</td>
+    <td class="govuk-table__cell govuk-!-text-align-centre"></td>
+  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Start</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+<a href="../v1/case-list" class="govuk-link govuk-link--no-visited-state govuk-!-font-size-14">View A</a>
+
+{% endblock %}

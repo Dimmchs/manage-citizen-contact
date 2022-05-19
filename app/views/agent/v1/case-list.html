@@ -1,0 +1,219 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home
+{% endblock %}
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Manage citizen contact
+      </a>
+
+    </div>
+  </div>
+</header>
+</div>
+
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
+
+<div class="moj-search govuk-!-margin-top-6">
+
+  <form action="../v1/history" method="post">
+
+    <div class="govuk-form-group">
+      <div id="search-hint" class="govuk-hint moj-search__hint ">
+        Find someone by NINO or reference number
+      </div>
+      <input class="govuk-input" id="search" name="search" type="search" aria-describedby="search-hint">
+    </div>
+
+    <button class="govuk-button moj-search__button" data-module="govuk-button">
+      Search
+    </button>
+  </form>
+</div>
+
+</div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">Outstanding cases</h1>
+
+<div class="govuk-tabs" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#checks">
+        Checks and repairs
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#followups">
+        Cases to follow up on
+      </a>
+    </li>
+  </ul>
+  <div class="govuk-tabs__panel" id="checks">
+    <h2 class="govuk-heading-l">Do checks and repairs</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Benefit</th>
+          <th scope="col" class="govuk-table__header govuk-!-text-align-right">Cases</th>
+          <th scope="col" class="govuk-table__header"></th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Job Seeker's Allowance (JSA)</th>
+          <td class="govuk-table__cell govuk-!-text-align-right">12</td>
+          <td class="govuk-table__cell govuk-!-text-align-centre"></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Start</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Employment Support Allowance (ESA)</th>
+          <td class="govuk-table__cell govuk-!-text-align-right">10</td>
+          <td class="govuk-table__cell govuk-!-text-align-centre"></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Start</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Attendance Allowance (AA)</th>
+          <td class="govuk-table__cell govuk-!-text-align-right">3</td>
+          <td class="govuk-table__cell govuk-!-text-align-centre"></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Start</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Disability Living Allowance (DLA)</th>
+          <td class="govuk-table__cell govuk-!-text-align-right">5</td>
+          <td class="govuk-table__cell govuk-!-text-align-centre"></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Start</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Retirement Pension (RP)</th>
+          <td class="govuk-table__cell govuk-!-text-align-right">15</td>
+          <td class="govuk-table__cell govuk-!-text-align-centre"><strong class="govuk-tag govuk-tag--red">1 urgent</strong></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="../v1/history-bvd">Start</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Incapacity Benefit (IB)</th>
+          <td class="govuk-table__cell govuk-!-text-align-right">-</td>
+          <td class="govuk-table__cell govuk-!-text-align-centre"></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Start</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Personal Independent Payment (PIP)</th>
+          <td class="govuk-table__cell govuk-!-text-align-right">-</td>
+          <td class="govuk-table__cell govuk-!-text-align-centre"></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Start</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Seasonal Payments (SP)</th>
+            <td class="govuk-table__cell govuk-!-text-align-right">2</td>
+          <td class="govuk-table__cell govuk-!-text-align-centre"></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Start</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Income Support (IS)</th>
+            <td class="govuk-table__cell govuk-!-text-align-right">7</td>
+          <td class="govuk-table__cell govuk-!-text-align-centre"><strong class="govuk-tag govuk-tag--red">2 urgent</strong></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="../v1/unavailable">Start</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="followups">
+    <h2 class="govuk-heading-l">Follow up on a case</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Benefit</th>
+          <th scope="col" class="govuk-table__header govuk-!-text-align-right">Cases</th>
+          <th scope="col" class="govuk-table__header"></th>
+          <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Job Seeker's Allowance (JSA)</th>
+          <td class="govuk-table__cell govuk-!-text-align-right">-</td>
+          <td class="govuk-table__cell govuk-!-text-align-centre"></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Start</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Employment Support Allowance (ESA)</th>
+          <td class="govuk-table__cell govuk-!-text-align-right">2</td>
+          <td class="govuk-table__cell govuk-!-text-align-centre"><strong class="govuk-tag govuk-tag--red">1 urgent</strong></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="../v1/history">Start</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Attendance Allowance (AA)</th>
+          <td class="govuk-table__cell govuk-!-text-align-right">1</td>
+          <td class="govuk-table__cell govuk-!-text-align-centre"></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Start</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Disability Living Allowance (DLA)</th>
+          <td class="govuk-table__cell govuk-!-text-align-right">-</td>
+          <td class="govuk-table__cell govuk-!-text-align-centre"></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Start</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Retirement Pension (RP)</th>
+          <td class="govuk-table__cell govuk-!-text-align-right">1</td>
+          <td class="govuk-table__cell govuk-!-text-align-centre"></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Start</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Incapacity Benefit (IB)</th>
+          <td class="govuk-table__cell govuk-!-text-align-right">-</td>
+          <td class="govuk-table__cell govuk-!-text-align-centre"></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Start</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Personal Independent Payment (PIP)</th>
+          <td class="govuk-table__cell govuk-!-text-align-right">-</td>
+          <td class="govuk-table__cell govuk-!-text-align-centre"></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Start</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Seasonal Payments (SP)</th>
+            <td class="govuk-table__cell govuk-!-text-align-right">-</td>
+          <td class="govuk-table__cell govuk-!-text-align-centre"></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Start</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Income Support (IS)</th>
+            <td class="govuk-table__cell govuk-!-text-align-right">-</td>
+          <td class="govuk-table__cell govuk-!-text-align-centre"></td>
+          <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Start</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<a href="../v1/case-list-b" class="govuk-link govuk-link--no-visited-state govuk-!-font-size-14">View B</a>
+
+{% endblock %}
