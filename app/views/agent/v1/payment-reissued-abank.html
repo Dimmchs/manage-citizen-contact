@@ -49,12 +49,53 @@
                 </div>
                 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                   <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold" for="waste">Job Seeker's Allowance (JSA) - £138.80<br><p>Due date: 15 April 2022</p></label>
+                    <input class="govuk-checkboxes__input" id="payment" name="payment" type="checkbox" value="JSA" checked data-aria-controls="conditional-contact">
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold" for="payment">Job Seeker's Allowance (JSA) - £138.80<br><p>Due date: 15 April 2022</p>
+
+                      <p class="govuk-body">Please specify the amount (if different to the original payment)</p>
+                      <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                          Input the actual amount
+                        </span>
+                        </summary>
+                      <div class="govuk-details__text">
+                        <div class="govuk-form-group">
+                          <!--<label class="govuk-label" for="amount">Amount</label>-->
+                          <div id="amount" class="govuk-hint">For example, £ 1,234.00</div>
+                          <input class="govuk-input govuk-input--width-10" id="amount" name="amount" type="amount" value="£" autocomplete="amount">
+                        </div>
+
+                      </div>
+                      </details>
+
+
+
+                    </label>
+
                   </div>
                   <div class="govuk-checkboxes__item">
                     <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold" for="waste">Disability Living Allowance (DLA) - £100.00<br><p>Due date: 8 May 2022</p></label>
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold" for="waste">Disability Living Allowance (DLA) - £100.00<br><p>Due date: 8 May 2022</p>
+
+                      <p class="govuk-body">Please specify the amount (if different to the original payment)</p>
+                      <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                          Input the actual amount
+                        </span>
+                        </summary>
+                      <div class="govuk-details__text">
+                        <div class="govuk-form-group">
+                          <!--<label class="govuk-label" for="amount">Amount</label>-->
+                          <div id="amount" class="govuk-hint">For example, £ 1,234.00</div>
+                          <input class="govuk-input govuk-input--width-10" id="amount" name="amount" type="amount" value="£" autocomplete="amount">
+                        </div>
+
+                      </div>
+                      </details>
+
+                    </label>
                   </div>
                 </div>
             </div>
@@ -65,5 +106,7 @@
 
     </div>
   </div>
+
+
 
 {% endblock %}
