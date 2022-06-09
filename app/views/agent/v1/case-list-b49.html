@@ -25,7 +25,7 @@
 
 <div class="moj-search govuk-!-margin-top-6">
 
-  <form action="../v1/history" method="post">
+  <form action="../v1/history-hh" method="post">
 
     <div class="govuk-form-group">
       <div id="search-hint" class="govuk-hint moj-search__hint ">
@@ -72,27 +72,32 @@
             <label class="govuk-label govuk-checkboxes__label" for="ESA">Employment Support Allowance (ESA)</label>
           </div>
           <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="AA" name="AA" type="checkbox" value="AA" checked>
-            <label class="govuk-label govuk-checkboxes__label" for="AA">Attendance Allowance (AA)</label>
-          </div>
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="DLA" name="DLA" type="checkbox" value="DLA" checked>
-            <label class="govuk-label govuk-checkboxes__label" for="DLA">Disability Living Allowance (DLA)</label>
+            <input class="govuk-checkboxes__input" id="IS" name="IS" type="checkbox" value="IS" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="IS">Income Support (IS)</label>
           </div>
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="RP" name="RP" type="checkbox" value="RP" checked>
             <label class="govuk-label govuk-checkboxes__label" for="RP">Retirement Pension (RP)	</label>
           </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="AA" name="AA" type="checkbox" value="AA" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="AA">Attendance Allowance (AA)</label>
+          </div>
+
+
         </div>
       </fieldset>
     </div>
     <button class="govuk-button" data-module="govuk-button">Apply filters</button>
-
   </div>
   <div class="govuk-grid-column-one-half">
     <div class="govuk-form-group">
       <fieldset class="govuk-fieldset">
         <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="DLA" name="DLA" type="checkbox" value="DLA" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="DLA">Disability Living Allowance (DLA)</label>
+          </div>
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="IB" name="IB" type="checkbox" value="IB" checked>
             <label class="govuk-label govuk-checkboxes__label" for="IB">Incapacity Benefit (IB)	</label>
@@ -105,10 +110,7 @@
             <input class="govuk-checkboxes__input" id="SP" name="SP" type="checkbox" value="SP" checked>
             <label class="govuk-label govuk-checkboxes__label" for="SP">Seasonal Payments (SP)</label>
           </div>
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="IS" name="IS" type="checkbox" value="IS" checked>
-            <label class="govuk-label govuk-checkboxes__label" for="IS">Income support (IS)</label>
-          </div>
+
         </div>
       </fieldset>
     </div>
@@ -130,21 +132,21 @@
 <tbody class="govuk-table__body">
 <tr class="govuk-table__row">
   <th scope="row" class="govuk-table__header">1. Do checks and repairs</th>
-  <td class="govuk-table__cell govuk-!-text-align-right">46</td>
+  <td class="govuk-table__cell govuk-!-text-align-right">27</td>
   <td class="govuk-table__cell govuk-!-text-align-centre"></td>
-  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Start</a></td>
+  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="../v1/unavailable">Start</a></td>
 </tr>
 <tr class="govuk-table__row">
   <th scope="row" class="govuk-table__header">2. Follow up on a case</th>
-    <td class="govuk-table__cell govuk-!-text-align-right">3</td>
+    <td class="govuk-table__cell govuk-!-text-align-right">22</td>
     <td class="govuk-table__cell govuk-!-text-align-centre"></td>
-  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Start</a></td>
+  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="../v1/unavailable">Start</a></td>
 </tr>
 </tbody>
 </table>
 
 
 
-<a href="../v1/case-list" class="govuk-link govuk-link--no-visited-state govuk-!-font-size-14">View A</a>
+<a href="../v1/case-list-a50" class="govuk-link govuk-link--no-visited-state govuk-!-font-size-14">View A</a>
 
 {% endblock %}

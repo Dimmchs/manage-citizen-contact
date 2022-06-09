@@ -34,33 +34,55 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Which payments have you reissued?</h1>
 
-      <h1 class="govuk-heading-l">Which of the following payments have you reissued?</h1>
+      <table class="govuk-table govuk-!-margin-bottom-8" data-module="moj-multi-select" data-multi-select-checkbox="#select-all" >
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col" id="select-all"></th>
+            <th class="govuk-table__header" scope="col">Payment</th>
+            <th class="govuk-table__header" scope="col">Amount</th>
+            <th class="govuk-table__header" scope="col">Start date</th>
+            <th class="govuk-table__header" scope="col">End/due date</th>
+            <th class="govuk-table__header govuk-table__header--numeric" scope="col"></th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row govuk-table__row--selected">
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                <input type="checkbox" class="govuk-checkboxes__input" id="JSA">
+                <label class="govuk-label govuk-checkboxes__label" for="JSA">
+                  <span class="govuk-visually-hidden">Select JSA</span>
+                </label>
+              </div>
+            </td>
+            <td class="govuk-table__header">Job Seeker's Allowance (JSA)</td>
+            <td class="govuk-table__cell">£138.80</td>
+            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">15/04/2022</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Edit</a></td>
+          </tr>
+          <tr class="govuk-table__row govuk-table__row--selected">
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                <input type="checkbox" class="govuk-checkboxes__input" id="JSA">
+                <label class="govuk-label govuk-checkboxes__label" for="JSA">
+                  <span class="govuk-visually-hidden">Select JSA</span>
+                </label>
+              </div>
+            </td>
+            <td class="govuk-table__header">Disability Living Allowance (DLA)</td>
+            <td class="govuk-table__cell">£100.00</td>
+            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">15/04/2022</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Edit</a></td>
+          </tr>
+        </tbody>
+      </table>
 
-      <form class="form" action="history-success" method="post">
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-            <div class="govuk-form-group">
-                </div>
-                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold" for="waste">XX - £00.00<br><p>Due date: -</p></label>
-                  </div>
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold" for="waste">XX - £00.00<br><p>Due date: -</p></label>
-                  </div>
-                </div>
-            </div>
+      <button class="govuk-button" data-module="govuk-button">Confirm update</button>
 
-        <button class="govuk-button" data-module="govuk-button">Confirm update</button>
 
-      </form>
-
-    </div>
-  </div>
 
 {% endblock %}

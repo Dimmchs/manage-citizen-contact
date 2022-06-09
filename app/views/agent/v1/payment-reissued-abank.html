@@ -23,9 +23,6 @@
     <a class="govuk-breadcrumbs__link" href="#">Citizen history</a>
   </li>
   <li class="govuk-breadcrumbs__list-item">
-    <a class="govuk-breadcrumbs__link" href="/agent/v1/update">Update</a>
-  </li>
-  <li class="govuk-breadcrumbs__list-item">
     <a class="govuk-breadcrumbs__link" href="javascript:history.back()">Bank details updated</a>
   </li>
   <li class="govuk-breadcrumbs__list-item">
@@ -40,63 +37,72 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">Which of the following payments have you reissued?</h1>
 
+      <h1 class="govuk-heading-l">Which of the following payments have you reissued?</h1>
+      <div id="with-hint-hint" class="govuk-hint">
+        You can manually edit payment details if you reissued one amount for a series of payments of the same benefit.
+      </div>
+    </div>
+  </div>
       <form class="form" action="history-success" method="post">
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <div class="govuk-form-group">
                 </div>
                 <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="payment" name="payment" type="checkbox" value="JSA" checked data-aria-controls="conditional-contact">
-                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold" for="payment">Job Seeker's Allowance (JSA) - £138.80<br><p>Due date: 15 April 2022</p>
 
-                      <p class="govuk-body">Please specify the amount (if different to the original payment)</p>
+
+
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="payment" name="payment" type="checkbox" value="carcasses">
+                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold" for="payment">Retirement Pension (RP) - £179.60<br><p>Returned payment date: 00 April 2022</p>
+
                       <details class="govuk-details" data-module="govuk-details">
                         <summary class="govuk-details__summary">
                         <span class="govuk-details__summary-text">
-                          Input the actual amount
+                          Edit details
                         </span>
                         </summary>
                       <div class="govuk-details__text">
-                        <div class="govuk-form-group">
-                          <!--<label class="govuk-label" for="amount">Amount</label>-->
-                          <div id="amount" class="govuk-hint">For example, £ 1,234.00</div>
-                          <input class="govuk-input govuk-input--width-10" id="amount" name="amount" type="amount" value="£" autocomplete="amount">
-                        </div>
+                      <!--<label class="govuk-label" for="amount">You can manually edit details if you reissued one amount for a series of payments of the same benefit.</label>-->
+                        <dl class="govuk-summary-list govuk-summary-list--no-border">
+                          <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">Amount<p class="govuk-hint">For example, £193.54</p></dt>
+                            <dd class="govuk-summary-list__value">
+                              <div class="govuk-input__wrapper">
+                              <div class="govuk-input__prefix" aria-hidden="true">£</div>
+                              <input class="govuk-input govuk-input--width-10" id="currency" name="currency" type="text" spellcheck="false" aria-describedby="currency-hint">
+                              </div>
+                            </dd>
+                          </div>
+                          <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">Start date<p class="govuk-hint">For example, 28 2 2022</p></dt>
+                            <dd class="govuk-summary-list__value">
+                              <div class="govuk-date-input__item">
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="day" name="day" type="text" inputmode="numeric">
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="month" name="month" type="text" inputmode="numeric">
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="year" name="year" type="text" inputmode="numeric">
+                              </div>
+                            </dd>
+                          </div>
+                          <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">End date<p class="govuk-hint">For example, 28 2 2022</p></dt>
+                            <dd class="govuk-summary-list__value">
+                              <div class="govuk-date-input__item">
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="day" name="day" type="text" inputmode="numeric">
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="month" name="month" type="text" inputmode="numeric">
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="year" name="year" type="text" inputmode="numeric">
+                              </div>
+                            </dd>
+                          </div>
+                        </dl>
 
                       </div>
                       </details>
-
-
-
-                    </label>
-
-                  </div>
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                    <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold" for="waste">Disability Living Allowance (DLA) - £100.00<br><p>Due date: 8 May 2022</p>
-
-                      <p class="govuk-body">Please specify the amount (if different to the original payment)</p>
-                      <details class="govuk-details" data-module="govuk-details">
-                        <summary class="govuk-details__summary">
-                        <span class="govuk-details__summary-text">
-                          Input the actual amount
-                        </span>
-                        </summary>
-                      <div class="govuk-details__text">
-                        <div class="govuk-form-group">
-                          <!--<label class="govuk-label" for="amount">Amount</label>-->
-                          <div id="amount" class="govuk-hint">For example, £ 1,234.00</div>
-                          <input class="govuk-input govuk-input--width-10" id="amount" name="amount" type="amount" value="£" autocomplete="amount">
-                        </div>
-
-                      </div>
-                      </details>
-
                     </label>
                   </div>
+
+
                 </div>
             </div>
 
@@ -104,8 +110,7 @@
 
       </form>
 
-    </div>
-  </div>
+
 
 
 
