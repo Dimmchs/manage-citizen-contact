@@ -20,10 +20,10 @@
 <div class="govuk-breadcrumbs">
 <ol class="govuk-breadcrumbs__list">
   <li class="govuk-breadcrumbs__list-item">
-    <a class="govuk-breadcrumbs__link" href="/agent/v1/history">Citizen history</a>
+    <a class="govuk-breadcrumbs__link" href="/agent/v1-2/history">Citizen history</a>
   </li>
   <li class="govuk-breadcrumbs__list-item">
-    <a class="govuk-breadcrumbs__link" href="/agent/v1/update">Update</a>
+    <a class="govuk-breadcrumbs__link" href="/agent/v1-2/update-2">Update</a>
   </li>
   <li class="govuk-breadcrumbs__list-item">
     <a class="govuk-breadcrumbs__link">Details updated</a>
@@ -135,7 +135,7 @@
               </fieldset>
             </div>
 
-            <form class="form" action="../v1/redirect" method="post">
+            <form class="form" action="../v1-2/payment-reissued-abank" method="post">
             <div class="govuk-form-group govuk-!-margin-bottom-8">
               <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -146,13 +146,13 @@
                 </div>
                 <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="changed-name" name="redirectUrl" type="radio" value="../v1/payment-reissued-abank">
+                    <input class="govuk-radios__input" id="changed-name" name="redirectUrl" type="radio" value="yes">
                     <label class="govuk-label govuk-radios__label" for="changed-name">
                       Yes
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="changed-name-2" name="redirectUrl" type="radio" value="../v1/history-success">
+                    <input class="govuk-radios__input" id="changed-name-2" name="redirectUrl" type="radio" value="no">
                     <label class="govuk-label govuk-radios__label" for="changed-name-2">
                       No
                     </label>

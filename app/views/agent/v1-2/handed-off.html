@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Case handed off
+{% endblock %}
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Manage citizen contact
+      </a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs">
+<ol class="govuk-breadcrumbs__list">
+  <li class="govuk-breadcrumbs__list-item">
+    <a class="govuk-breadcrumbs__link" href="#">Citizen history</a>
+  </li>
+  <li class="govuk-breadcrumbs__list-item">
+    <a class="govuk-breadcrumbs__link" href="javascript:history.back()">Update</a>
+  </li>
+  <li class="govuk-breadcrumbs__list-item">
+    <a class="govuk-breadcrumbs__link">Case handed off</a>
+  </li>
+</ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l"> Why have you handed off the case?</h1>
+
+      <form class="form" action="../v1-2/history-jh-success" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="deceased" name="handed-off" type="radio" value="deceased">
+                <label class="govuk-label govuk-radios__label" for="deceased">
+                  Citizen is deceased
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="appointee" name="handed-off" type="radio" value="appointee">
+                <label class="govuk-label govuk-radios__label" for="appointee">
+                  Citizen has an appointee
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="noresponse" name="handed-off" type="radio" value="noresponse">
+                <label class="govuk-label govuk-radios__label" for="noresponse">
+                 Citizen has not responded after 2nd DpGen
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="inactive" name="handed-off" type="radio" value="inactive">
+                <label class="govuk-label govuk-radios__label" for="inactive">
+                  Account is inactive
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="notscope" name="handed-off" type="radio" value="notscope">
+                <label class="govuk-label govuk-radios__label" for="notscope">
+                  Benefit is not in scope
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Confirm update</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
