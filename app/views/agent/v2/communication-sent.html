@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Communication sent
+{% endblock %}
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Manage citizen contact
+      </a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs">
+<ol class="govuk-breadcrumbs__list">
+  <li class="govuk-breadcrumbs__list-item">
+    <a class="govuk-breadcrumbs__link" href="../v2/case-list">Outstanding cases</a>
+  </li>
+  <li class="govuk-breadcrumbs__list-item">
+    <a class="govuk-breadcrumbs__link" href="#">Citizen history</a>
+  </li>
+  <li class="govuk-breadcrumbs__list-item">
+    <a class="govuk-breadcrumbs__link" href="javascript:history.back()">Update</a>
+  </li>
+  <li class="govuk-breadcrumbs__list-item">
+    <a class="govuk-breadcrumbs__link">Communication sent</a>
+  </li>
+</ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Which type of communication did you send?</h1>
+
+      <form class="form" action="../v2/" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                    <label class="govuk-label govuk-radios__label" for="contact">
+                      First DpGen
+                    </label>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                    <label class="govuk-label govuk-radios__label" for="contact-2">
+                      Second DpGen
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="contact-by-phone">
+                        Input batch number
+                      </label>
+                      <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" autocomplete="tel">
+                    </div>
+
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-3">
+                    <label class="govuk-label govuk-radios__label" for="contact-3">
+                      Text message
+                    </label>
+                  </div>
+                </div>
+
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Confirm update</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

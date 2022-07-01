@@ -20,19 +20,24 @@
 <div class="govuk-breadcrumbs">
 <ol class="govuk-breadcrumbs__list">
   <li class="govuk-breadcrumbs__list-item">
-    <a class="govuk-breadcrumbs__link" href="../v1-2/history">Citizen history</a>
+    <a class="govuk-breadcrumbs__link" href="../v2/case-list">Outstanding cases</a>
   </li>
   <li class="govuk-breadcrumbs__list-item">
-    <a class="govuk-breadcrumbs__link" href="../v1-2/update-2">Update</a>
+    <a class="govuk-breadcrumbs__link" href="../v2/history">Citizen history</a>
   </li>
   <li class="govuk-breadcrumbs__list-item">
-    <a class="govuk-breadcrumbs__link" href="../v1-2/details-updated">Bank details updated</a>
+    <a class="govuk-breadcrumbs__link" href="../v2/update">Update</a>
+  </li>
+  <li class="govuk-breadcrumbs__list-item">
+    <a class="govuk-breadcrumbs__link" href="../v2/details-updated">Details updated</a>
   </li>
   <li class="govuk-breadcrumbs__list-item">
     <a class="govuk-breadcrumbs__link">Payment reissued</a>
   </li>
 </ol>
 </div>
+
+
 {% endblock %}
 
 {% block content %}
@@ -47,7 +52,7 @@
       </div>
     </div>
   </div>
-      <form class="form" action="../v1-2/history-success" method="post">
+      <form class="form" action="case-list-success" method="post">
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <div class="govuk-form-group">

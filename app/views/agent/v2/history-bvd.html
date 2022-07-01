@@ -1,0 +1,114 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Citizen overview
+{% endblock %}
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Manage citizen contact
+      </a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-width-container">
+    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+      <span class="govuk-caption-xl">BB 44 55 99 D</span>
+      <h1 class="govuk-heading-xl">Berend Van Duuren</h1>
+      <strong class="govuk-tag govuk-tag--yellow govuk-!-margin-bottom-8">1 payment returned</strong>
+
+      <div class="moj-page-header-actions">
+        <div class="moj-page-header-actions__title">
+          <h1 class="govuk-heading-l">Contact history</h1>
+        </div>
+        <div class="moj-page-header-actions__actions">
+          <div class="moj-button-menu">
+            <div class="moj-button-menu__wrapper">
+              <a href="../v1/update" role="button" draggable="false" class="govuk-button" data-module="govuk-button">Add update</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="moj-timeline">
+
+
+
+        <div class="moj-timeline__item govuk-!-margin-bottom-8">
+          <div class="moj-timeline__header">
+            <h2 class="moj-timeline__title govuk-!-font-size-24">Payment returned: Retirement Pension (RP)</h2>
+            <p class="moj-timeline__byline govuk-!-font-size-24"></p>
+          </div>
+          <p class="moj-timeline__date govuk-!-font-size-19">
+            <time datetime="2022-06-14T10:45:00.000Z">13 June 2022 at 10:45am</time>
+          </p>
+          <div class="moj-timeline__description">
+            <details class="govuk-details govuk-!-margin-bottom-0">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Payment details
+                </span>
+              </summary>
+              <div class="govuk-grid-row"><div class="govuk-grid-column-two-thirds">
+              <table class="govuk-table govuk-!-margin-top-2">
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Amount</th>
+                      <td class="govuk-table__cell">£1,114.80</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Due date</th>
+                      <td class="govuk-table__cell">8 June 2022</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Service ID</th>
+                      <td class="govuk-table__cell">RPQO</td>
+                    </tr>
+                    <th scope="row" class="govuk-table__header">Name on account</th>
+                    <td class="govuk-table__cell">Berend Van Duuren</td>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Account number</th>
+                      <td class="govuk-table__cell">44559900</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Sort code</th>
+                      <td class="govuk-table__cell">11-22-33</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Building society roll number</th>
+                      <td class="govuk-table__cell">-</td>
+                    </tr>
+                  </tbody>
+                </table>
+                </div></div>
+            </details>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

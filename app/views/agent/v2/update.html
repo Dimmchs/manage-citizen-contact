@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Update history
+{% endblock %}
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__content">
+      <a href="#" class="govuk-header__link govuk-header__link--service-name">
+        Manage citizen contact
+      </a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="../v2/case-list">Outstanding cases</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="../v2/history">Citizen history</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link">Update</a>
+    </li>
+  </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">What update are you adding?</h1>
+
+      <form class="form" action="../v2/redirect" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="sign-in" name="redirectUrl" type="radio" value="../v2/communication-sent" aria-describedby="sign-in-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="sign-in">Communication sent</label>
+                <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">If you sent DpGen (letter) or text message (SMS).</div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="sign-in" name="redirectUrl" type="radio" value="../v2/response-unsuccessful" aria-describedby="sign-in-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="sign-in">Citizen response unsuccessful</label>
+                <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">If DpGen returned with incomplete details and you sent cover letter, or if citizen was unable to provide valid details over the phone.</div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="sign-in" name="redirectUrl" type="radio" value="../v2/details-updated" aria-describedby="sign-in-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="sign-in">Bank details updated</label>
+                <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">If you updated bank details in benefit systems and reissued a payment.</div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="sign-in" name="redirectUrl" type="radio" value="../v2/handed-off" aria-describedby="sign-in-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="sign-in">Case handed off</label>
+                <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">For cases of deceased citizens or appointees, out of scope benefits and cases where citizen has not responded after second DpGen. </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="sign-in" name="redirectUrl" type="radio" value="../v2/case-closed" aria-describedby="sign-in-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-!-font-weight-bold" for="sign-in">Case closed</label>
+                <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">For cases of citizens who live overseas or cases which have already been updated.</div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

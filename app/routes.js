@@ -4,7 +4,7 @@ const express = require('express')
 
 module.exports =()=> {
   const app = express.Router();
-  app.post('/agent/v1/redirect', (req, res) => {
+  app.post('/agent/v2/redirect', (req, res) => {
 
 res.redirect(req.body.redirectUrl);
 });
