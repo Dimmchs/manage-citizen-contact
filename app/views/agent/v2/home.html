@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home - Remittance Service
+{% endblock %}
+
+{% block header %}
+<header class="hmcts-header" role="banner">
+<div class="hmcts-header__container">
+
+  <div class="hmcts-header__logo">
+    <a class="hmcts-header__link" href="#">Remittance service</a>
+  </div>
+
+<div class="hmcts-header__content">
+  <nav class="hmcts-header__navigation" aria-label="Account navigation">
+    <ul class="hmcts-header__navigation-list">
+
+      <li class="hmcts-header__navigation-item">
+        <a class="hmcts-header__navigation-link" href="../../index">
+          Sign out
+        </a>
+      </li>
+
+    </ul>
+  </nav>
+</div>
+
+</div>
+</header>
+
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a prototype version of the new remittance service - some pages are still under development.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block content %}
+<h1 class="govuk-heading-xl">Home</h1>
+<div class="govuk-grid-row govuk-!-margin-bottom-9">
+  <div class="govuk-grid-column-one-third">
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-top-2">
+    <a class="govuk-link govuk-heading-m" href="../awacs/case-list">Manage redirected payments</a>
+    <p class="govuk-hint">Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla.</p>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-top-2">
+    <a class="govuk-link govuk-heading-m" href="../v2/unavailable">Manage returned payments</a>
+    <p class="govuk-hint">Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla.</p>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-top-2">
+    <a class="govuk-link govuk-heading-m" href="../v2/case-list">Manage citizen contact</a>
+    <p class="govuk-hint">Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla.</p>
+  </div>
+
+
+</div>
+
+
+{% endblock %}

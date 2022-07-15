@@ -5,50 +5,108 @@
 {% endblock %}
 
 {% block header %}
-<header class="govuk-header " role="banner" data-module="govuk-header">
-  <div class="govuk-header__container govuk-width-container">
-    <div class="govuk-header__content">
-      <a href="#" class="govuk-header__link govuk-header__link--service-name">
-        Manage citizen contact
-      </a>
 
+
+<header class="hmcts-header" role="banner">
+
+  <div class="hmcts-header__container">
+
+    <div class="hmcts-header__logo">
+      <a class="hmcts-header__link" href="../v2/home">Remittance service</a>
     </div>
+
+  <div class="hmcts-header__content">
+    <nav class="hmcts-header__navigation" aria-label="Account navigation">
+      <ul class="hmcts-header__navigation-list">
+        <li class="govuk-header__navigation-item">
+          <a class="govuk-header__link" href="../awacs/case-list">
+           Manage redirected payments
+          </a>
+        </li>
+        <li class="govuk-header__navigation-item">
+          <a class="govuk-header__link" href="../v2/unavailable">
+           Manage returned payments
+          </a>
+        </li>
+        <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+          <a class="govuk-header__link" href="#">
+           Manage citizen contact
+          </a>
+        </li>
+
+      </ul>
+    </nav>
   </div>
-</header>
-</div>
+
+
+  </div>
+  </header>
+
+
+
+  <div class="moj-primary-navigation">
+
+    <div class="moj-primary-navigation__container">
+
+      <div class="moj-primary-navigation__nav">
+
+        <nav class="moj-primary-navigation" aria-label="Primary navigation">
+
+          <ul class="moj-primary-navigation__list">
+            <li class="moj-primary-navigation__item">
+              <a class="moj-primary-navigation__link" aria-current="page" href="#1">Outstanding cases (101)</a>
+            </li>
+
+            <li class="moj-primary-navigation__item">
+              <a class="moj-primary-navigation__link" href="../v2/case-list-hold">Cases on hold (1)</a>
+            </li>
+          </ul>
+
+        </nav>
+
+      </div>
+      <div class="moj-primary-navigation__search">
+
+        <div class="moj-search moj-search--ondark moj-search--inline">
+          <form action="../v2/history-am" method="get">
+
+            <div class="govuk-form-group">
+              <label class="govuk-label moj-search__label govuk-visually-hidden" for="search-1">
+                Search
+              </label>
+
+              <input class="govuk-input moj-search__input" id="search-1" name="search-1" type="search">
+            </div>
+
+            <button class="govuk-button moj-search__button" data-module="govuk-button">
+              Find a case
+            </button>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+    </div>
 
 {% endblock %}
 
 {% block beforeContent %}
-<div class="govuk-grid-row">
-<div class="govuk-grid-column-two-thirds">
-
-<div class="moj-search govuk-!-margin-top-6">
-
-  <form action="../v2/history" method="post">
-
-    <div class="govuk-form-group">
-      <div id="search-hint" class="govuk-hint moj-search__hint ">
-        Find someone by NINO or reference number
-      </div>
-      <input class="govuk-input" id="search" name="search" type="search" aria-describedby="search-hint">
-    </div>
-
-    <button class="govuk-button moj-search__button" data-module="govuk-button">
-      Search
-    </button>
-  </form>
-</div>
-
-</div>
-</div>
+<!--<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      alpha
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a prototype version of a new service - some pages are still under development.
+    </span>
+  </p>
+</div>-->
 
 {% endblock %}
 
 {% block content %}
-
 <h1 class="govuk-heading-l">Outstanding cases</h1>
-
 <details class="govuk-details" data-module="govuk-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
@@ -56,11 +114,16 @@
     </span>
   </summary>
   <div class="govuk-details__text">
-  <h1 class="govuk-heading-m">Benefits</h1>
 
-  <div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-half">
     <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset govuk-!-margin-bottom-2">
+        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="select-all" name="JSA" type="checkbox" value="JSA" checked>
+            <label class="govuk-label govuk-checkboxes__label govuk-!-font-weight-bold" for="JSA">Select all benefits</label>
+          </div>
+        </div>
+      </fieldset>
       <fieldset class="govuk-fieldset">
         <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
           <div class="govuk-checkboxes__item">
@@ -84,66 +147,111 @@
             <label class="govuk-label govuk-checkboxes__label" for="AA">Attendance Allowance (AA)</label>
           </div>
 
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="DLA" name="DLA" type="checkbox" value="DLA" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="DLA">Disability Living Allowance (DLA)</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="IB" name="IB" type="checkbox" value="IB" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="IB">Incapacity Benefit (IB)	</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="PIP" name="PIP" type="checkbox" value="PIP" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="PIP">Personal Independent Payment (PIP)	</label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="SP" name="SP" type="checkbox" value="SP" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="SP">Seasonal Payments (SP)</label>
+              </div>
+
+            </div>
+          </fieldset>
 
         </div>
-      </fieldset>
+
+
     </div>
     <button class="govuk-button" data-module="govuk-button">Apply filters</button>
   </div>
   <div class="govuk-grid-column-one-half">
     <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset">
-        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="DLA" name="DLA" type="checkbox" value="DLA" checked>
-            <label class="govuk-label govuk-checkboxes__label" for="DLA">Disability Living Allowance (DLA)</label>
-          </div>
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="IB" name="IB" type="checkbox" value="IB" checked>
-            <label class="govuk-label govuk-checkboxes__label" for="IB">Incapacity Benefit (IB)	</label>
-          </div>
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="PIP" name="PIP" type="checkbox" value="PIP" checked>
-            <label class="govuk-label govuk-checkboxes__label" for="PIP">Personal Independent Payment (PIP)	</label>
-          </div>
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="SP" name="SP" type="checkbox" value="SP" checked>
-            <label class="govuk-label govuk-checkboxes__label" for="SP">Seasonal Payments (SP)</label>
-          </div>
 
-        </div>
-      </fieldset>
     </div>
-  </div>
-  </div>
   </div>
 </details>
 
 <table class="govuk-table">
 <thead class="govuk-table__head">
-<!--<caption class="govuk-table__caption govuk-table__caption--m">The team have 151 cases to work on</caption>-->
+<caption class="govuk-table__caption govuk-table__caption--m">The team have 101 cases to work on</caption>
 <tr class="govuk-table__row">
-  <th scope="col" class="govuk-table__header">Queue</th>
-  <th scope="col" class="govuk-table__header">Description</th>
-  <th scope="col" class="govuk-table__header">Cases</th>
-  <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
+  <th scope="col" class="govuk-table__header govuk-!-width-one-half"></th>
+  <!--<th scope="col" class="govuk-table__header">Description</th>-->
+  <th scope="col" class="govuk-table__header govuk-table__header--numeric">Cases</th>
+  <th scope="col" class="govuk-table__header govuk-table__header"></th>
 </tr>
 </thead>
 <tbody class="govuk-table__body">
 <tr class="govuk-table__row">
     <th scope="row" class="govuk-table__header">1. New cases</th>
-    <td class="govuk-table__cell">Cases with returned payments where agents need <br> to do suitability checks to determine next action</td>
-    <td class="govuk-table__cell">77</td>
+    <!--<td class="govuk-table__cell">Cases with returned payments where agents need <br> to do suitability checks to determine next action</td>-->
+    <td class="govuk-table__cell govuk-table__cell--numeric">77</td>
     <td class="govuk-table__cell govuk-table__cell--numeric"><a href="../v2/history-jh">Start</a></td>
 </tr>
 <tr class="govuk-table__row">
-    <th scope="row" class="govuk-table__header">2. Cases to follow up on</th>
-    <td class="govuk-table__cell">Cases which are in progress and agents <br> need to follow up on</td>
-    <td class="govuk-table__cell">24</td>
+    <th scope="row" class="govuk-table__header">2. Additional action cases</th>
+    <!--<td class="govuk-table__cell">Cases which are in progress and agents <br> need to follow up on</td>-->
+    <td class="govuk-table__cell govuk-table__cell--numeric">24</td>
     <td class="govuk-table__cell govuk-table__cell--numeric"><a href="../v2/unavailable">Start</a></td>
 </tr>
 </tbody>
 </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">const selectAll = document.getElementById('select-all');
+const checkboxes = [];
+const allCheckboxes = document.querySelectorAll('input[type="checkbox"]');
+
+for (const checkbox of allCheckboxes) {
+  if (checkbox.id !== 'select-all') {
+    checkboxes.push(checkbox);
+  }
+}
+
+for (const checkbox of checkboxes) {
+  checkbox.onclick = (ele) => {
+    if (checkboxes.every((item) => item.checked)) {
+      selectAll.checked = ele.target.checked;
+    } else {
+      selectAll.checked = false;
+    }
+  };
+}
+
+selectAll.onclick = () => {
+  for (const checkbox of checkboxes) {
+    checkbox.checked = selectAll.checked;
+  }
+};</script>
 
 
 

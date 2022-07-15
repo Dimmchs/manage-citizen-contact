@@ -1,20 +1,21 @@
 {% extends "layout.html" %}
 
 {% block header %}
-  {# Set serviceName in config.js. #}
-  {{ govukHeader({
-    homepageUrl: "https://www.gov.uk/",
-    serviceName: "Manage citizen Contact",
-    serviceUrl: "index",
+<header class="hmcts-header" role="banner">
+<div class="hmcts-header__container">
 
-    navigation: [
-    {
-      href: "",
-      text: ""
-    }
-    ]
+  <div class="hmcts-header__logo">
+    <a class="hmcts-header__link" href="#">Manage citizen contact</a>
+  </div>
 
-  }) }}
+<div class="hmcts-header__content">
+  <nav class="hmcts-header__navigation" aria-label="Account navigation">
+  </nav>
+</div>
+
+</div>
+</header>
+
 {% endblock %}
 
 {% block content %}
@@ -22,7 +23,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">
-      Service prototype history
+      Prototype history
       </h1>
 
       <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
@@ -35,8 +36,19 @@
             </h2>
           </div>
           <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-            <p class='govuk-body'>Last updated: 15 June 2022</p>
-            <p class='govuk-body'>Created: 3 May 2022</p>
+            <table class="govuk-table govuk-!-margin-top-2">
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Last updated:</th>
+                    <td class="govuk-table__cell">15 June 2022</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Created:</th>
+                    <td class="govuk-table__cell">3 May 2022</td>
+                  </tr>
+                </tbody>
+              </table>
+
             <a href="../agent/v1/case-list" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
               View prototype V1-1
             </a>
@@ -54,9 +66,36 @@
             </h2>
           </div>
           <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-            <p class='govuk-body'>Last updated: 24 June 2022</p>
-            <p class='govuk-body'>Created: 24 June 2022</p>
-            <a href="../agent/v2/case-list" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+
+            <table class="govuk-table govuk-!-margin-top-2">
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Key updates:</th>
+                    <td class="govuk-table__cell">
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>Added Remittance service landing page</li>
+                        <li>Integration with Awacs UI - WIP</li>
+                        <li>View B similar to Awacs UI</li>
+                        <li>View B similar to Awacs UI</li>
+                        <li>Added 'cases on hold' queue</li>
+                        <li>Confirmation banner in case list page</li>
+                        <li>Citizen details bar (added Ref No)</li>
+                        <li>Updated timeline content</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Last updated:</th>
+                    <td class="govuk-table__cell">13 July 2022</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Created:</th>
+                    <td class="govuk-table__cell">24 June 2022</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            <a href="../agent/v2/home" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
               View prototype
             </a>
           </div>

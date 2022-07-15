@@ -40,38 +40,94 @@ Manage citizen contact
 {% endblock %}
 
 {% block header %}
-<header class="hmcts-header" role="banner">
 
-<div class="hmcts-header__container">
 
-<div class="hmcts-header__logo">
-  <a class="hmcts-header__link" href="#">Check an unsent payment</a>
-</div>
 
-</div>
 
-</header>
 {% endblock %}
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
 
 {% if useAutoStoreData %}
   {% block footer %}
+  <!--<footer class="govuk-footer ">
+  <div class="govuk-width-container ">
+  <div class="govuk-footer__navigation">
+      <div class="govuk-footer__section govuk-grid-column-full">
+          <h2 class="govuk-footer__heading govuk-heading-m">Remittance Service</h2>
+          <ul class="govuk-footer__list govuk-footer__list--columns-1">
+              <li class="govuk-footer__list-item">
+                  <a class="govuk-footer__link" href="../v2/home">
+                      Go to Home page
+                  </a>
+              </li>
+              <li class="govuk-footer__list-item">
+                  <a class="govuk-footer__link" href="../v2/case-list-awacs">
+                      Switch to Manage redirected payments
+                  </a>
+              </li>
+              <li class="govuk-footer__list-item">
+                  <a class="govuk-footer__link" href="../v2/unavailable">
+                      Switch to Manage returned payments
+                  </a>
+              </li>
+              <li class="govuk-footer__list-item">
+                  <a class="govuk-footer__link" href="../v2/case-list">
+                      Switch to Manage citizen contact
+                  </a>
+              </li>
+          </ul>
+      </div>
+
+  </div>
+  </div>
+    </footer>
+
+
+
     {{ govukFooter({
       meta: {
         items: [
           {
-            href: "../../agent/v2/case-list",
-            text: "Start again"
+            href: "../../agent/v2/home",
+            text: "Start again (Home)"
           },
           {
             href: "../../index",
-            text: "Clear data"
+            text: "Go to index page"
           }
         ],
         visuallyHiddenTitle: "Footer links"
       }
-    }) }}
+    }) }}-->
+
+  <footer class="govuk-footer ">
+  <div class="govuk-width-container ">
+  <h2 class="govuk-visually-hidden">Meta links</h2>
+  <ul class="govuk-footer__inline-list">
+      <li class="govuk-footer__inline-list-item">
+          <a class="govuk-footer__link" href="../../agent/v2/home">Start again (Home)</a>
+      </li>
+      <li class="govuk-footer__inline-list-item">
+          <a class="govuk-footer__link" href="../../index">Go to index page</a>
+      </li>
+  </ul>
+  </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   {% endblock %}
 {% endif %}
 

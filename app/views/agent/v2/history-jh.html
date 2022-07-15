@@ -5,47 +5,85 @@
 {% endblock %}
 
 {% block header %}
-<header class="govuk-header " role="banner" data-module="govuk-header">
-  <div class="govuk-header__container govuk-width-container">
-    <div class="govuk-header__content">
-      <a href="#" class="govuk-header__link govuk-header__link--service-name">
-        Manage citizen contact
-      </a>
+<header class="hmcts-header" role="banner">
+
+  <div class="hmcts-header__container">
+
+    <div class="hmcts-header__logo">
+      <a class="hmcts-header__link" href="../v2/home">Remittance service</a>
     </div>
+
+  <div class="hmcts-header__content">
+    <nav class="hmcts-header__navigation" aria-label="Account navigation">
+      <ul class="hmcts-header__navigation-list">
+        <li class="govuk-header__navigation-item">
+          <a class="govuk-header__link" href="../awacs/case-list">
+           Manage redirected payments
+          </a>
+        </li>
+        <li class="govuk-header__navigation-item">
+          <a class="govuk-header__link" href="../v2/unavailable">
+           Manage returned payments
+          </a>
+        </li>
+        <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+          <a class="govuk-header__link" href="#">
+           Manage citizen contact
+          </a>
+        </li>
+
+      </ul>
+    </nav>
   </div>
-</header>
+
+
+  </div>
+  </header>
 {% endblock %}
 
 {% block beforeContent %}
-  <div class="govuk-width-container">
-    <a href="javascript:history.back()" class="govuk-back-link">Back</a>
-  </div>
+<div class="govuk-breadcrumbs">
+<ol class="govuk-breadcrumbs__list">
+  <li class="govuk-breadcrumbs__list-item">
+    <a class="govuk-breadcrumbs__link" href="../v2/case-list">Outstanding cases</a>
+  </li>
+  <li class="govuk-breadcrumbs__list-item">
+    <a class="govuk-breadcrumbs__link">Citizen history</a>
+  </li>
+</ol>
+</div>
 {% endblock %}
 
 {% block content %}
 
-      <span class="govuk-caption-xl">JJ 55 66 00 H</span>
-      <h1 class="govuk-heading-xl">Joan Hunt</h1>
-      <strong class="govuk-tag govuk-tag--yellow govuk-!-margin-bottom-8">PAYMENT RETURNED</strong>
+<h1 class="govuk-heading-xl govuk-!-margin-bottom-2">Joan Hunt</h1>
+<h2 class="govuk-heading-m govuk-!-font-weight-regular govuk-!-bottom-9">NINO <strong class="govuk-!-margin-right-4"> JJ 55 66 00 H </strong> Reference Number <strong>00-42JJ-8AW0</strong></h2>
 
-      <div class="moj-page-header-actions">
-        <div class="moj-page-header-actions__title">
-          <h1 class="govuk-heading-l">Contact history</h1>
-        </div>
-        <div class="moj-page-header-actions__actions">
-          <div class="moj-button-menu">
-            <div class="moj-button-menu__wrapper">
-              <a href="../v1/update" role="button" draggable="false" class="govuk-button" data-module="govuk-button">Add update</a>
-            </div>
-          </div>
-        </div>
+<div class="govuk-button-group govuk-!-margin-top-6">
+  <a href="../v2/update" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button moj-page-header-actions__action" data-module="govuk-button">Update history</a>
+  <a href="../v2/case-list-hold-new" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary moj-page-header-actions__action" data-module="govuk-button">Put case on hold</a>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-top-9">
+<div class="moj-page-header-actions">
+  <div class="moj-page-header-actions__title">
+    <h1 class="govuk-heading-l">Contact history</h1>
+  </div>
+  <div class="moj-page-header-actions__actions">
+    <div class="moj-button-menu">
+      <div class="moj-button-menu__wrapper">
+        <strong class="govuk-tag govuk-tag--grey govuk-!-margin-2">1 Outstanding payment</strong>
       </div>
+
+    </div>
+  </div>
+</div>
 
       <div class="moj-timeline">
 
         <div class="moj-timeline__item govuk-!-margin-bottom-8">
           <div class="moj-timeline__header">
-            <h2 class="moj-timeline__title govuk-!-font-size-24">Payment returned: Employment Support Allowance (ESA)</h2>
+            <h2 class="moj-timeline__title govuk-!-font-size-24">1 Payment returned: Employment Support Allowance (ESA)</h2>
             <p class="moj-timeline__byline govuk-!-font-size-24"></p>
           </div>
           <p class="moj-timeline__date govuk-!-font-size-19">

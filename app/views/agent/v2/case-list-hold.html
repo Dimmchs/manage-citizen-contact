@@ -1,0 +1,137 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Cases on hold
+{% endblock %}
+
+{% block header %}
+<header class="hmcts-header" role="banner">
+
+  <div class="hmcts-header__container">
+
+    <div class="hmcts-header__logo">
+      <a class="hmcts-header__link" href="../v2/home">Remittance service</a>
+    </div>
+
+  <div class="hmcts-header__content">
+    <nav class="hmcts-header__navigation" aria-label="Account navigation">
+      <ul class="hmcts-header__navigation-list">
+        <li class="govuk-header__navigation-item">
+          <a class="govuk-header__link" href="../awacs/case-list">
+           Manage redirected payments
+          </a>
+        </li>
+        <li class="govuk-header__navigation-item">
+          <a class="govuk-header__link" href="../v2/unavailable">
+           Manage returned payments
+          </a>
+        </li>
+        <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+          <a class="govuk-header__link" href="#">
+           Manage citizen contact
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+
+
+  </div>
+  </header>
+
+<div class="moj-primary-navigation">
+
+  <div class="moj-primary-navigation__container">
+
+    <div class="moj-primary-navigation__nav">
+
+      <nav class="moj-primary-navigation" aria-label="Primary navigation">
+
+        <ul class="moj-primary-navigation__list">
+          <li class="moj-primary-navigation__item">
+            <a class="moj-primary-navigation__link" href="../v2/case-list">Outstanding cases (101)</a>
+          </li>
+
+          <li class="moj-primary-navigation__item">
+            <a class="moj-primary-navigation__link" aria-current="page" href="#2">Cases on hold (1)</a>
+          </li>
+        </ul>
+
+      </nav>
+
+    </div>
+    <div class="moj-primary-navigation__search">
+
+      <div class="moj-search moj-search--ondark moj-search--inline">
+        <form action="" method="get">
+
+          <div class="govuk-form-group">
+            <label class="govuk-label moj-search__label govuk-visually-hidden" for="search-1">
+              Search
+            </label>
+
+            <input class="govuk-input moj-search__input " id="search-1" name="search-1" type="search">
+          </div>
+
+          <button class="govuk-button moj-search__button " data-module="govuk-button">
+            Find case
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+  </div>
+
+{% endblock %}
+
+{% block beforeContent %}
+
+
+{% endblock %}
+
+{% block content %}
+<h1 class="govuk-heading-l">Cases on hold</h1>
+
+<table class="govuk-table">
+<thead class="govuk-table__head">
+<caption class="govuk-table__caption govuk-table__caption--m">The team have 1 cases on hold</caption>
+<tr class="govuk-table__row">
+  <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">NINO</th>
+  <th scope="col" class="govuk-table__header govuk-!-width-one-half">Benefit type</th>
+  <th scope="col" class="govuk-table__header govuk-!-width-one-half">updated by</th>
+  <th scope="col" class="govuk-table__header govuk-!-width-one-quarter"></th>
+</tr>
+</thead>
+<tbody class="govuk-table__body">
+<tr class="govuk-table__row">
+  <td class="govuk-table__cell">XX 11 22 33 Z</td>
+  <td class="govuk-table__cell">Carer's Allowance</td>
+  <td class="govuk-table__cell">Joe Bloggs</td>
+  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Update</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

@@ -5,15 +5,40 @@
 {% endblock %}
 
 {% block header %}
-<header class="govuk-header " role="banner" data-module="govuk-header">
-  <div class="govuk-header__container govuk-width-container">
-    <div class="govuk-header__content">
-      <a href="#" class="govuk-header__link govuk-header__link--service-name">
-        Manage citizen contact
-      </a>
+<header class="hmcts-header" role="banner">
+
+  <div class="hmcts-header__container">
+
+    <div class="hmcts-header__logo">
+      <a class="hmcts-header__link" href="../v2/home">Remittance service</a>
     </div>
+
+  <div class="hmcts-header__content">
+    <nav class="hmcts-header__navigation" aria-label="Account navigation">
+      <ul class="hmcts-header__navigation-list">
+        <li class="govuk-header__navigation-item">
+          <a class="govuk-header__link" href="../awacs/case-list">
+           Manage redirected payments
+          </a>
+        </li>
+        <li class="govuk-header__navigation-item">
+          <a class="govuk-header__link" href="../v2/unavailable">
+           Manage returned payments
+          </a>
+        </li>
+        <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+          <a class="govuk-header__link" href="#">
+           Manage citizen contact
+          </a>
+        </li>
+
+      </ul>
+    </nav>
   </div>
-</header>
+
+
+  </div>
+  </header>
 {% endblock %}
 
 {% block beforeContent %}
@@ -66,14 +91,14 @@
               </fieldset>
           </div>
 
-      <form class="form" action="../v2/redirect" method="post">
+      <form class="form" action="../v2/case-list-success2" method="post">
         <h3 class="govuk-heading-m govuk-!-margin-top-8">Have you returned the DpGen with a cover letter?</h3>
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <div class="govuk-radios" data-module="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                    <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="<!--../v2/TBD-->" data-aria-controls="conditional-contact-2">
                     <label class="govuk-label govuk-radios__label" for="contact-2">
                       Yes
                     </label>
@@ -87,7 +112,7 @@
                     </div>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-3">
+                    <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value=" <!--../v2/TBD-->" data-aria-controls="conditional-contact-3">
                     <label class="govuk-label govuk-radios__label" for="contact-3">
                       No
                     </label>
