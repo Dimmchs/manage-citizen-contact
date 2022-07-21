@@ -10,19 +10,19 @@
   <div class="hmcts-header__container">
 
     <div class="hmcts-header__logo">
-      <a class="hmcts-header__link" href="../v2/home">Remittance service</a>
+      <a class="hmcts-header__link" href="#">Remittance service</a>
     </div>
 
   <div class="hmcts-header__content">
     <nav class="hmcts-header__navigation" aria-label="Account navigation">
       <ul class="hmcts-header__navigation-list">
         <li class="govuk-header__navigation-item">
-          <a class="govuk-header__link" href="../awacs/case-list">
+          <a class="govuk-header__link" href="#">
            Manage redirected payments
           </a>
         </li>
         <li class="govuk-header__navigation-item">
-          <a class="govuk-header__link" href="../v2/unavailable">
+          <a class="govuk-header__link" href="#">
            Manage returned payments
           </a>
         </li>
@@ -50,11 +50,11 @@
 
         <ul class="moj-primary-navigation__list">
           <li class="moj-primary-navigation__item">
-            <a class="moj-primary-navigation__link" aria-current="page" href="#">Outstanding cases (100)</a>
+            <a class="moj-primary-navigation__link" aria-current="page" href="#">Outstanding cases (99)</a>
           </li>
 
           <li class="moj-primary-navigation__item">
-            <a class="moj-primary-navigation__link" href="../v2/case-list-hold">Cases on hold (1)</a>
+            <a class="moj-primary-navigation__link" href="../v2/case-list-hold2">Cases on hold (2)</a>
           </li>
         </ul>
 
@@ -64,7 +64,7 @@
     <div class="moj-primary-navigation__search">
 
       <div class="moj-search moj-search--ondark moj-search--inline">
-        <form action="../v2/history-am" method="get">
+        <form action="#" method="get">
 
           <div class="govuk-form-group">
             <label class="govuk-label moj-search__label govuk-visually-hidden" for="search-1">
@@ -75,7 +75,7 @@
           </div>
 
           <button class="govuk-button moj-search__button" data-module="govuk-button">
-            Find case
+            Find someone
           </button>
 
         </form>
@@ -93,34 +93,6 @@
 {% endblock %}
 
 {% block content %}
-
-<div class="moj-banner moj-banner--success" role="region" aria-label="Success">
-  <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
-    <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" />
-  </svg>
-  <div class="moj-banner__message govuk-!-font-weight-bold">You have successfully added a new update to <a class="govuk-notification-banner__link" href="#">JJ556600H - Joan Hunt:</a>
-  <p>First DpGen sent</p>
-  </div>
-</div>
-
-
-
-<!--<div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-  <div class="govuk-notification-banner__header">
-    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-      Contact history updated
-    </h2>
-  </div>
-  <div class="govuk-notification-banner__content">
-    <h3 class="govuk-notification-banner__heading">You have added 2 new updates to<br><a class="govuk-notification-banner__link" href="#">AA112233M - Anna Miller</a>:</h3>
-    <p class="govuk-body"></p>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>Bank details updated following a citizen call</li>
-        <li>Payment reissued: Attendance Allowance (AA)</li>
-      </ul>
-  </div>
-</div>-->
-
 
 <h1 class="govuk-heading-l">Outstanding cases</h1>
 <details class="govuk-details" data-module="govuk-details">
@@ -200,10 +172,10 @@
 
 <table class="govuk-table">
 <thead class="govuk-table__head">
-<caption class="govuk-table__caption govuk-table__caption--m">The team have 100 cases to work on</caption>
+<caption class="govuk-table__caption govuk-table__caption--m">The team have 99 cases to work on</caption>
 <tr class="govuk-table__row">
-  <th scope="col" class="govuk-table__header govuk-!-width-one-half"></th>
-  <!--<th scope="col" class="govuk-table__header">Description</th>-->
+  <th scope="col" class="govuk-table__header govuk-!-width-one-third"></th>
+  <th scope="col" class="govuk-table__header govuk-!-width-one-third">Description</th>
   <th scope="col" class="govuk-table__header govuk-table__header--numeric">Cases</th>
   <th scope="col" class="govuk-table__header govuk-table__header"></th>
 </tr>
@@ -211,18 +183,19 @@
 <tbody class="govuk-table__body">
 <tr class="govuk-table__row">
     <th scope="row" class="govuk-table__header">1. New cases</th>
-    <!--<td class="govuk-table__cell">Cases with returned payments where agents need <br> to do suitability checks to determine next action</td>-->
-    <td class="govuk-table__cell govuk-table__cell--numeric">76</td>
-    <td class="govuk-table__cell govuk-table__cell--numeric"><a href="../v2/history-jh">Start</a></td>
+    <td class="govuk-table__cell">New cases with returned payments that require suitability checks</td>
+    <td class="govuk-table__cell govuk-table__cell--numeric">75</td>
+    <td class="govuk-table__cell govuk-table__cell--numeric"><a href="../v2/unavailable">Start</a></td>
 </tr>
 <tr class="govuk-table__row">
     <th scope="row" class="govuk-table__header">2. Additional action cases</th>
-    <!--<td class="govuk-table__cell">Cases which are in progress and agents <br> need to follow up on</td>-->
+    <td class="govuk-table__cell">Cases still in progress that require additional actions</td>
     <td class="govuk-table__cell govuk-table__cell--numeric">24</td>
-    <td class="govuk-table__cell govuk-table__cell--numeric"><a href="../v2/unavailable">Start</a></td>
+    <td class="govuk-table__cell govuk-table__cell--numeric"><a href="../v2/history-bvd">Start</a></td>
 </tr>
 </tbody>
 </table>
+
 
 
 

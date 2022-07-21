@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Case on hold
+{% endblock %}
+
+{% block header %}
+<header class="hmcts-header" role="banner">
+
+  <div class="hmcts-header__container">
+
+    <div class="hmcts-header__logo">
+      <a class="hmcts-header__link" href="#">Remittance service</a>
+    </div>
+
+  <div class="hmcts-header__content">
+    <nav class="hmcts-header__navigation" aria-label="Account navigation">
+      <ul class="hmcts-header__navigation-list">
+        <li class="govuk-header__navigation-item">
+          <a class="govuk-header__link" href="#">
+           Manage redirected payments
+          </a>
+        </li>
+        <li class="govuk-header__navigation-item">
+          <a class="govuk-header__link" href="#">
+           Manage returned payments
+          </a>
+        </li>
+        <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+          <a class="govuk-header__link" href="#">
+           Manage citizen contact
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+
+
+  </div>
+  </header>
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs">
+<ol class="govuk-breadcrumbs__list">
+  <li class="govuk-breadcrumbs__list-item">
+    <a class="govuk-breadcrumbs__link" href="../v2/case-list-1">Outstanding cases</a>
+  </li>
+  <li class="govuk-breadcrumbs__list-item">
+    <a class="govuk-breadcrumbs__link" href="../v2/history-hh">Citizen history</a>
+  </li>
+  <li class="govuk-breadcrumbs__list-item">
+    <a class="govuk-breadcrumbs__link" href="#">On-hold reason</a>
+  </li>
+</ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Can you explain why you put the case temporarily on hold?</h1>
+
+      <form class="form" action="../v2/case-list-hold1" method="post">
+        <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="70">
+          <div class="govuk-form-group">
+            <div id="with-hint-hint" class="govuk-hint">
+              The reason will appear on the case details (e.g. *TE BE UPDATED*).
+            </div>
+            <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="1" aria-describedby="with-hint-info with-hint-hint"></textarea>
+          </div>
+
+          <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
+            You can enter up to 70 characters
+          </div>
+
+        </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Confirm update</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

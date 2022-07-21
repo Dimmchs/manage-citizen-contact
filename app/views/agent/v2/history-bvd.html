@@ -10,19 +10,19 @@
   <div class="hmcts-header__container">
 
     <div class="hmcts-header__logo">
-      <a class="hmcts-header__link" href="../v2/home">Remittance service</a>
+      <a class="hmcts-header__link" href="#">Remittance service</a>
     </div>
 
   <div class="hmcts-header__content">
     <nav class="hmcts-header__navigation" aria-label="Account navigation">
       <ul class="hmcts-header__navigation-list">
         <li class="govuk-header__navigation-item">
-          <a class="govuk-header__link" href="../awacs/case-list">
+          <a class="govuk-header__link" href="#">
            Manage redirected payments
           </a>
         </li>
         <li class="govuk-header__navigation-item">
-          <a class="govuk-header__link" href="../v2/unavailable">
+          <a class="govuk-header__link" href="#">
            Manage returned payments
           </a>
         </li>
@@ -45,7 +45,7 @@
 <div class="govuk-breadcrumbs">
 <ol class="govuk-breadcrumbs__list">
   <li class="govuk-breadcrumbs__list-item">
-    <a class="govuk-breadcrumbs__link" href="../v2/case-list">Outstanding cases</a>
+    <a class="govuk-breadcrumbs__link" href="../v2/case-list-2">Outstanding cases</a>
   </li>
   <li class="govuk-breadcrumbs__list-item">
     <a class="govuk-breadcrumbs__link">Citizen history</a>
@@ -56,8 +56,8 @@
 
 {% block content %}
 
-<h1 class="govuk-heading-xl govuk-!-margin-bottom-2">Joan Hunt</h1>
-<h2 class="govuk-heading-m govuk-!-font-weight-regular govuk-!-bottom-9">NINO <strong class="govuk-!-margin-right-4"> JJ 55 66 00 H </strong> Reference Number <strong>00-42JJ-8AW0</strong></h2>
+<h1 class="govuk-heading-xl govuk-!-margin-bottom-2">Berend Van Duuren </h1>
+<h2 class="govuk-heading-m govuk-!-font-weight-regular govuk-!-bottom-9">NINO <strong class="govuk-!-margin-right-4"> BB 44 55 99 D </strong> Reference Number <strong>10-42BV-8AD0</strong></h2>
 
 <div class="govuk-button-group govuk-!-margin-top-6">
   <a href="../v2/update" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button moj-page-header-actions__action" data-module="govuk-button">Update history</a>
@@ -72,7 +72,9 @@
   <div class="moj-page-header-actions__actions">
     <div class="moj-button-menu">
       <div class="moj-button-menu__wrapper">
-        <strong class="govuk-tag govuk-tag--grey govuk-!-margin-2">2 Outstanding payments</strong>
+        <strong class="govuk-tag govuk-tag--grey govuk-!-margin-2">1 Outstanding payment</strong>
+        <strong class="govuk-tag govuk-tag--turquoise govuk-!-margin-0">2nd Dpgen sent</strong>
+
       </div>
 
     </div>
@@ -83,11 +85,31 @@
 
         <div class="moj-timeline__item govuk-!-margin-bottom-8">
           <div class="moj-timeline__header">
-            <h2 class="moj-timeline__title govuk-!-font-size-24">1 Payment returned: Attendance Allowance (AA)</h2>
+            <h2 class="moj-timeline__title govuk-!-font-size-24">Second DpGen sent</h2>
+            <p class="moj-timeline__byline govuk-!-font-size-24">by Joe Bloggs</p>
+          </div>
+          <p class="moj-timeline__date govuk-!-font-size-19">
+            <time datetime="2022-06-16T02:00:00.000Z">18 July 2022 at 2:00pm</time>
+          </p>
+        </div>
+
+        <div class="moj-timeline__item govuk-!-margin-bottom-8">
+          <div class="moj-timeline__header">
+            <h2 class="moj-timeline__title govuk-!-font-size-24">First DpGen sent</h2>
+            <p class="moj-timeline__byline govuk-!-font-size-24">by Joe Bloggs</p>
+          </div>
+          <p class="moj-timeline__date govuk-!-font-size-19">
+            <time datetime="2022-06-16T02:00:00.000Z">5 July 2022 at 1:00pm</time>
+          </p>
+        </div>
+
+        <div class="moj-timeline__item govuk-!-margin-bottom-8">
+          <div class="moj-timeline__header">
+            <h2 class="moj-timeline__title govuk-!-font-size-24">1 Payment returned: Retirement Pension (RP)</h2>
             <p class="moj-timeline__byline govuk-!-font-size-24"></p>
           </div>
           <p class="moj-timeline__date govuk-!-font-size-19">
-            <time datetime="2022-06-10T10:45:00.000Z">25 July 2022 at 10:45am</time>
+            <time datetime="2022-06-10T10:45:00.000Z">29 June 2022 at 10:00am</time>
           </p>
           <div class="moj-timeline__description">
             <details class="govuk-details govuk-!-margin-bottom-0">
@@ -101,7 +123,7 @@
                   <tbody class="govuk-table__body">
                     <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header govuk-!-width-one-half">Amount</th>
-                      <td class="govuk-table__cell">£92.40</td>
+                      <td class="govuk-table__cell">£440.00</td>
                     </tr>
                     <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">Due date</th>
@@ -109,67 +131,17 @@
                     </tr>
                     <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">Service ID</th>
-                      <td class="govuk-table__cell">SAQF</td>
+                      <td class="govuk-table__cell">RPEE</td>
                     </tr>
                     <th scope="row" class="govuk-table__header">Name on account</th>
-                    <td class="govuk-table__cell">Joe Clarke</td>
+                    <td class="govuk-table__cell">Berend Van Duuren </td>
                     <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">Account number</th>
-                      <td class="govuk-table__cell">55660001</td>
+                      <td class="govuk-table__cell">55551001</td>
                     </tr>
                     <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">Sort code</th>
-                      <td class="govuk-table__cell">11-22-33</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Building society roll number</th>
-                      <td class="govuk-table__cell">-</td>
-                    </tr>
-                  </tbody>
-                </table>
-                </div></div>
-            </details>
-          </div>
-        </div>
-        <div class="moj-timeline__item govuk-!-margin-bottom-8">
-          <div class="moj-timeline__header">
-            <h2 class="moj-timeline__title govuk-!-font-size-24">1 Payment returned: Disability Living Allowance (DLA)</h2>
-            <p class="moj-timeline__byline govuk-!-font-size-24"></p>
-          </div>
-          <p class="moj-timeline__date govuk-!-font-size-19">
-            <time datetime="2022-06-10T10:45:00.000Z">22 July 2022 at 10:00am</time>
-          </p>
-          <div class="moj-timeline__description">
-            <details class="govuk-details govuk-!-margin-bottom-0">
-              <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text">
-                  Payment details
-                </span>
-              </summary>
-              <div class="govuk-grid-row"><div class="govuk-grid-column-two-thirds">
-              <table class="govuk-table govuk-!-margin-top-2">
-                  <tbody class="govuk-table__body">
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header govuk-!-width-one-half">Amount</th>
-                      <td class="govuk-table__cell">£308.00</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Due date</th>
-                      <td class="govuk-table__cell">26 July 2022</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Service ID</th>
-                      <td class="govuk-table__cell">SAQF</td>
-                    </tr>
-                    <th scope="row" class="govuk-table__header">Name on account</th>
-                    <td class="govuk-table__cell">Joe Clarke</td>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Account number</th>
-                      <td class="govuk-table__cell">55660001</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Sort code</th>
-                      <td class="govuk-table__cell">11-22-33</td>
+                      <td class="govuk-table__cell">11-44-33</td>
                     </tr>
                     <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">Building society roll number</th>

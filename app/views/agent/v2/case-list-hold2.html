@@ -10,19 +10,19 @@
   <div class="hmcts-header__container">
 
     <div class="hmcts-header__logo">
-      <a class="hmcts-header__link" href="../v2/home">Remittance service</a>
+      <a class="hmcts-header__link" href="#">Remittance service</a>
     </div>
 
   <div class="hmcts-header__content">
     <nav class="hmcts-header__navigation" aria-label="Account navigation">
       <ul class="hmcts-header__navigation-list">
         <li class="govuk-header__navigation-item">
-          <a class="govuk-header__link" href="../awacs/case-list">
+          <a class="govuk-header__link" href="#">
            Manage redirected payments
           </a>
         </li>
         <li class="govuk-header__navigation-item">
-          <a class="govuk-header__link" href="../v2/unavailable">
+          <a class="govuk-header__link" href="#">
            Manage returned payments
           </a>
         </li>
@@ -50,11 +50,11 @@
 
         <ul class="moj-primary-navigation__list">
           <li class="moj-primary-navigation__item">
-            <a class="moj-primary-navigation__link" href="../v2/case-list">Outstanding cases (101)</a>
+            <a class="moj-primary-navigation__link" href="../v2/case-list-2">Outstanding cases (99)</a>
           </li>
 
           <li class="moj-primary-navigation__item">
-            <a class="moj-primary-navigation__link" aria-current="page" href="#2">Cases on hold (1)</a>
+            <a class="moj-primary-navigation__link" aria-current="page" href="#">Cases on hold (2)</a>
           </li>
         </ul>
 
@@ -93,6 +93,7 @@
 {% endblock %}
 
 {% block content %}
+
 <h1 class="govuk-heading-l">Cases on hold</h1>
 
 <table class="govuk-table">
@@ -107,10 +108,16 @@
 </thead>
 <tbody class="govuk-table__body">
 <tr class="govuk-table__row">
+  <td class="govuk-table__cell">HH 99 88 77 H</td>
+  <td class="govuk-table__cell">*TE BE UPDATED*</td>
+  <td class="govuk-table__cell">Alex Thomson</td>
+  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="../v2/history-hh1">Update</a></td>
+</tr>
+<tr class="govuk-table__row">
   <td class="govuk-table__cell">XX 00 88 77 D</td>
   <td class="govuk-table__cell">*TE BE UPDATED*</td>
   <td class="govuk-table__cell">Joe Bloggs</td>
-  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="#">Update</a></td>
+  <td class="govuk-table__cell govuk-table__cell--numeric"><a href="../v2/unavailable">Update</a></td>
 </tr>
 </tbody>
 </table>
