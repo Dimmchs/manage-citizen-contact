@@ -45,7 +45,7 @@
 <div class="govuk-breadcrumbs">
 <ol class="govuk-breadcrumbs__list">
   <li class="govuk-breadcrumbs__list-item">
-    <a class="govuk-breadcrumbs__link" href="../v2/case-list-1">Outstanding cases</a>
+    <a class="govuk-breadcrumbs__link" href="../v2/case-list-5">Outstanding cases</a>
   </li>
   <li class="govuk-breadcrumbs__list-item">
     <a class="govuk-breadcrumbs__link">Citizen history</a>
@@ -56,15 +56,27 @@
 
 {% block content %}
 
-      <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">Hannah Holmes</h1>
-      <h2 class="govuk-heading-m govuk-!-font-weight-regular govuk-!-bottom-9">NINO <strong class="govuk-!-margin-right-4"> HH 99 88 77 H </strong> Reference Number <strong>01-44HH-8AW0</strong></h2>
+
+
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">Anna Miller</h1>
+      <h2 class="govuk-heading-m govuk-!-font-weight-regular govuk-!-bottom-9">NINO <strong class="govuk-!-margin-right-4"> AA 11 22 33 M </strong> Reference Number <strong>00-35BB-8AW0</strong></h2>
 
       <div class="govuk-button-group govuk-!-margin-top-6">
         <a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button moj-page-header-actions__action" data-module="govuk-button">Update history</a>
-        <a href="../v2/on-hold" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary moj-page-header-actions__action" data-module="govuk-button">Put case on hold</a>
+        <a href="#" role="button" draggable="false" class="govuk-button moj-button-menu__item govuk-button--secondary moj-page-header-actions__action" data-module="govuk-button">Put case on hold</a>
       </div>
 
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-top-9">
+
+      <div class="moj-banner moj-banner" role="region" aria-label="Information">
+        <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+        <path d="M13.7,18.5h-2.4v-2.4h2.4V18.5z M12.5,13.7c-0.7,0-1.2-0.5-1.2-1.2V7.7c0-0.7,0.5-1.2,1.2-1.2s1.2,0.5,1.2,1.2v4.8
+        C13.7,13.2,13.2,13.7,12.5,13.7z M12.5,0.5c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.4,12-12S19.1,0.5,12.5,0.5z" />
+        </svg>
+        <div class="moj-banner__message govuk-!-font-weight-bold">There is a suspension on the claim which must be removed on [date].
+        </div>
+      </div>
+
       <div class="moj-page-header-actions">
         <div class="moj-page-header-actions__title">
           <h1 class="govuk-heading-l">Contact history</h1>
@@ -73,6 +85,7 @@
           <div class="moj-button-menu">
             <div class="moj-button-menu__wrapper">
               <strong class="govuk-tag govuk-tag--grey govuk-!-margin-2">1 Outstanding payment</strong>
+              <strong class="govuk-tag govuk-tag--turquoise govuk-!-margin-0">1st Dpgen sent</strong>
             </div>
 
           </div>
@@ -84,66 +97,11 @@
 
         <div class="moj-timeline__item govuk-!-margin-bottom-8">
           <div class="moj-timeline__header">
-            <h2 class="moj-timeline__title govuk-!-font-size-24">1 Payment returned: Incapacity Benefit (IB)</h2>
-            <p class="moj-timeline__byline govuk-!-font-size-24"></p>
+            <h2 class="moj-timeline__title govuk-!-font-size-24">1 Payment reissued: Retirement Pension (RP)</h2>
+            <p class="moj-timeline__byline govuk-!-font-size-24">by Alex Thomson</p>
           </div>
           <p class="moj-timeline__date govuk-!-font-size-19">
-            <time datetime="2022-06-03T10:45:00.000Z">29 July 2022 at 10:00am</time>
-          </p>
-          <div class="moj-timeline__description">
-            <details class="govuk-details govuk-!-margin-bottom-0">
-              <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text">
-                  Payment details
-                </span>
-              </summary>
-              <div class="govuk-grid-row"><div class="govuk-grid-column-two-thirds">
-              <table class="govuk-table govuk-!-margin-top-2">
-                  <tbody class="govuk-table__body">
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header govuk-!-width-one-half">Return reason</th>
-                      <td class="govuk-table__cell">Invalid details</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header govuk-!-width-one-half">Amount</th>
-                      <td class="govuk-table__cell">£90.70</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Due date</th>
-                      <td class="govuk-table__cell">5 August 2022</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Service ID</th>
-                      <td class="govuk-table__cell">SAHF</td>
-                    </tr>
-                    <th scope="row" class="govuk-table__header">Name on account</th>
-                    <td class="govuk-table__cell">Hannah Holmes</td>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Account number</th>
-                      <td class="govuk-table__cell">00112221</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Sort code</th>
-                      <td class="govuk-table__cell">11-22-33</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Building society roll number</th>
-                      <td class="govuk-table__cell">-</td>
-                    </tr>
-                  </tbody>
-                </table>
-                </div></div>
-            </details>
-          </div>
-        </div>
-
-        <div class="moj-timeline__item govuk-!-margin-bottom-8">
-          <div class="moj-timeline__header">
-            <h2 class="moj-timeline__title govuk-!-font-size-24">1 Payment reissued: Incapacity Benefit (IB)</h2>
-            <p class="moj-timeline__byline govuk-!-font-size-24">by Ken Benson</p>
-          </div>
-          <p class="moj-timeline__date govuk-!-font-size-19">
-            <time datetime="2022-06-15T10:45:00.000Z">15 November 2021 at 3:00pm</time>
+            <time datetime="2022-06-15T10:45:00.000Z">3 August 2021 at 2:00pm</time>
           </p>
           <div class="moj-timeline__description">
             <details class="govuk-details govuk-!-margin-bottom-0">
@@ -157,11 +115,15 @@
                     <tbody class="govuk-table__body">
                       <tr class="govuk-table__row">
                         <th scope="row" class="govuk-table__header govuk-!-width-one-half">Benefit</th>
-                        <td class="govuk-table__cell">Incapacity Benefit (IB)</td>
+                        <td class="govuk-table__cell">Retirement Pension (RP)</td>
                       </tr>
                       <tr class="govuk-table__row">
-                        <th scope="row" class="govuk-table__header">Amount</th>
-                        <td class="govuk-table__cell">£90.70</td>
+                        <th scope="row" class="govuk-table__header">Total amount</th>
+                        <td class="govuk-table__cell">£502.04</td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Payment period</th>
+                        <td class="govuk-table__cell">19/08/2022 - 02/08/2022</td>
                       </tr>
                     </tbody>
                   </table>
@@ -174,10 +136,10 @@
         <div class="moj-timeline__item govuk-!-margin-bottom-8">
           <div class="moj-timeline__header">
             <h2 class="moj-timeline__title govuk-!-font-size-24">Bank details updated</h2>
-            <p class="moj-timeline__byline govuk-!-font-size-24">by Ken Benson</p>
+            <p class="moj-timeline__byline govuk-!-font-size-24">by Alex Thomson</p>
           </div>
           <p class="moj-timeline__date govuk-!-font-size-19">
-            <time datetime="2022-06-15T10:45:00.000Z">15 November 2021 at 3:00pm</time>
+            <time datetime="2022-06-15T10:45:00.000Z">3 August 2021 at 2:00pm</time>
           </p>
           <div class="moj-timeline__description">
             <details class="govuk-details govuk-!-margin-bottom-0">
@@ -191,7 +153,11 @@
                   <tbody class="govuk-table__body">
                     <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header govuk-!-width-one-half">Details received</th>
-                      <td class="govuk-table__cell">During call with citizen</td>
+                      <td class="govuk-table__cell">via returned DpGen</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header govuk-!-width-one-half">Batch number</th>
+                      <td class="govuk-table__cell">Batch1-822</td>
                     </tr>
                   </tbody>
                 </table>
@@ -200,15 +166,15 @@
                   <tbody class="govuk-table__body govuk-!-margin-top-2">
                     <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header govuk-!-width-one-half">Name on the account</th>
-                      <td class="govuk-table__cell">Hannah Holmes</td>
+                      <td class="govuk-table__cell">Anna Miller</td>
                     </tr>
                     <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">Account number</th>
-                      <td class="govuk-table__cell">00112221</td>
+                      <td class="govuk-table__cell">00110405</td>
                     </tr>
                     <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">Sort code</th>
-                      <td class="govuk-table__cell">11-22-33</td>
+                      <td class="govuk-table__cell">11-04-05</td>
                     </tr>
                     <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">Building society roll number</th>
@@ -216,7 +182,7 @@
                     </tr>
                     <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">Updated benefit systems</th>
-                      <td class="govuk-table__cell">IB</td>
+                      <td class="govuk-table__cell">RP</td>
                     </tr>
                   </tbody>
                 </table>
@@ -227,21 +193,21 @@
 
         <div class="moj-timeline__item govuk-!-margin-bottom-8">
           <div class="moj-timeline__header">
-            <h2 class="moj-timeline__title govuk-!-font-size-24">Text message sent</h2>
-            <p class="moj-timeline__byline govuk-!-font-size-24">by Joe Bloggs</p>
+            <h2 class="moj-timeline__title govuk-!-font-size-24">First DpGen sent</h2>
+            <p class="moj-timeline__byline govuk-!-font-size-24">by Ken Benson</p>
           </div>
           <p class="moj-timeline__date govuk-!-font-size-19">
-            <time datetime="2022-06-09T11:00:00.000Z">9 November 2021 at 1:00pm</time>
+            <time datetime="2022-06-09T11:00:00.000Z">19 July 2022 at 2:00pm</time>
           </p>
         </div>
 
         <div class="moj-timeline__item govuk-!-margin-bottom-8">
           <div class="moj-timeline__header">
-            <h2 class="moj-timeline__title govuk-!-font-size-24">1 Payment returned: Incapacity Benefit (IB)</h2>
+            <h2 class="moj-timeline__title govuk-!-font-size-24">1 Payment returned: Retirement Pension (RP)</h2>
             <p class="moj-timeline__byline govuk-!-font-size-24"></p>
           </div>
           <p class="moj-timeline__date govuk-!-font-size-19">
-            <time datetime="2022-06-03T10:45:00.000Z">3 November 2021 at 9:45am</time>
+            <time datetime="2022-06-03T10:45:00.000Z">19 July 2022 at 9:45am</time>
           </p>
           <div class="moj-timeline__description">
             <details class="govuk-details govuk-!-margin-bottom-0">
@@ -254,30 +220,26 @@
               <table class="govuk-table govuk-!-margin-top-2">
                   <tbody class="govuk-table__body">
                     <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header govuk-!-width-one-half">Return reason</th>
-                      <td class="govuk-table__cell">Invalid details</td>
-                    </tr>
-                    <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header govuk-!-width-one-half">Amount</th>
-                      <td class="govuk-table__cell">£90.70<</td>
+                      <td class="govuk-table__cell">£251.02</td>
                     </tr>
                     <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">Due date</th>
-                      <td class="govuk-table__cell">1 Novemeber 2022</td>
+                      <td class="govuk-table__cell">18 July 2022</td>
                     </tr>
                     <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">Service ID</th>
-                      <td class="govuk-table__cell">DAFF</td>
+                      <td class="govuk-table__cell">RPIF</td>
                     </tr>
                     <th scope="row" class="govuk-table__header">Name on account</th>
-                    <td class="govuk-table__cell">Hannah Holmes</td>
+                    <td class="govuk-table__cell">Anna Miller</td>
                     <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">Account number</th>
-                      <td class="govuk-table__cell">00003321</td>
+                      <td class="govuk-table__cell">00112221</td>
                     </tr>
                     <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">Sort code</th>
-                      <td class="govuk-table__cell">11-00-33</td>
+                      <td class="govuk-table__cell">11-22-33</td>
                     </tr>
                     <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">Building society roll number</th>

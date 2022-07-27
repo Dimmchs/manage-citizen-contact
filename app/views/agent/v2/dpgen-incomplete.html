@@ -45,10 +45,10 @@
 <div class="govuk-breadcrumbs">
 <ol class="govuk-breadcrumbs__list">
   <li class="govuk-breadcrumbs__list-item">
-    <a class="govuk-breadcrumbs__link" href="../v2/case-list">Outstanding cases</a>
+    <a class="govuk-breadcrumbs__link" href="#">Outstanding cases</a>
   </li>
   <li class="govuk-breadcrumbs__list-item">
-    <a class="govuk-breadcrumbs__link" href="../v2/case-list">Citizen history</a>
+    <a class="govuk-breadcrumbs__link" href="#">Citizen history</a>
   </li>
   <li class="govuk-breadcrumbs__list-item">
     <a class="govuk-breadcrumbs__link" href="../v2/update">Update</a>
@@ -91,40 +91,44 @@
               </fieldset>
           </div>
 
-      <form class="form" action="../v2/case-list-success2" method="post">
-        <h3 class="govuk-heading-m govuk-!-margin-top-8">Have you returned the DpGen with a cover letter?</h3>
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-            <div class="govuk-radios" data-module="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="<!--../v2/TBD-->" data-aria-controls="conditional-contact-2">
-                    <label class="govuk-label govuk-radios__label" for="contact-2">
-                      Yes
-                    </label>
-                  </div>
-                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label" for="contact-by-phone">
-                        Input returned DpGen batch number
-                      </label>
-                      <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" autocomplete="tel">
-                    </div>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value=" <!--../v2/TBD-->" data-aria-controls="conditional-contact-3">
-                    <label class="govuk-label govuk-radios__label" for="contact-3">
-                      No
-                    </label>
-                  </div>
-            </div>
+          <form class="form" action="../v2/redirect" method="post">
+          <div class="govuk-form-group govuk-!-margin-bottom-8">
+            <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h1 class="govuk-fieldset__heading">How did you follow up with the citizen?</h1>
+              </legend>
+              <!--<div id="changed-name-hint" class="govuk-hint">
+                You must add an additonal update to input bank details and payment information if you updated bank details successfully over the phone.
+              </div>-->
+              <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changed-name" name="redirectUrl" type="radio" value="../v2/payment-reissued-abank">
+                  <label class="govuk-label govuk-radios__label" for="changed-name">
+                    Returned the DpGen with a cover letter
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changed-name-2" name="redirectUrl" type="radio" value="../v2/history-success">
+                  <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                    Called the citizen
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive">Warning</span>
+              You must add an additonal update to input bank details and payment information if you managed to receive bank details over the phone.
+            </strong>
+          </div>
 
-          </fieldset>
-        </div>
 
-        <button class="govuk-button" data-module="govuk-button">Confirm update</button>
 
-      </form>
+          <button class="govuk-button" data-module="govuk-button">Confirm update</button>
+          </form>
 
     </div>
   </div>

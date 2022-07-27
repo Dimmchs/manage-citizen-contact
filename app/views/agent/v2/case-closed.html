@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Case closed
+  Updated by local office
 {% endblock %}
 
 {% block header %}
@@ -48,7 +48,7 @@
     <a class="govuk-breadcrumbs__link" href="../v2/case-list">Outstanding cases</a>
   </li>
   <li class="govuk-breadcrumbs__list-item">
-    <a class="govuk-breadcrumbs__link" href="">Citizen history</a>
+    <a class="govuk-breadcrumbs__link" href="#">Citizen history</a>
   </li>
   <li class="govuk-breadcrumbs__list-item">
     <a class="govuk-breadcrumbs__link" href="../v2/update">Update</a>
@@ -65,9 +65,9 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l"> Why have you closed the case?</h1>
+      <h1 class="govuk-heading-l">Why have you closed the case?</h1>
 
-      <form class="form" action="../v2/case-list-success4" method="post">
+      <form class="form" action="../v2/updatedby-lo" method="post">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
@@ -75,12 +75,12 @@
 
             <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-                <label class="govuk-label govuk-radios__label" for="where-do-you-live">Citizen lives overseas</label>
+                <input class="govuk-radios__input" id="closed" name="closed" type="radio" value="#">
+                <label class="govuk-label govuk-radios__label" for="closed">Citizen lives overseas</label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
-                <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">Case has already been updated by the local office</label>
+                <input class="govuk-radios__input" id="closed-2" name="closed" type="radio" value="#">
+                <label class="govuk-label govuk-radios__label" for="closed-2">Case has already been updated by the local office</label>
               </div>
             </div>
 

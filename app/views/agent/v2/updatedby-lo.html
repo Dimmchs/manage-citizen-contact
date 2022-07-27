@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Citizen response unsuccessful
+  Case closed
 {% endblock %}
 
 {% block header %}
@@ -48,13 +48,16 @@
     <a class="govuk-breadcrumbs__link" href="../v2/case-list">Outstanding cases</a>
   </li>
   <li class="govuk-breadcrumbs__list-item">
-    <a class="govuk-breadcrumbs__link" href="../v2/history">Citizen history</a>
+    <a class="govuk-breadcrumbs__link" href="">Citizen history</a>
   </li>
   <li class="govuk-breadcrumbs__list-item">
     <a class="govuk-breadcrumbs__link" href="../v2/update">Update</a>
   </li>
   <li class="govuk-breadcrumbs__list-item">
-    <a class="govuk-breadcrumbs__link">Citizen response unsuccessful</a>
+    <a class="govuk-breadcrumbs__link" href="../v2/case-closed">Case closed</a>
+  </li>
+  <li class="govuk-breadcrumbs__list-item">
+    <a class="govuk-breadcrumbs__link">Updated by local office</a>
   </li>
 </ol>
 </div>
@@ -65,34 +68,30 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">Why was the response unsuccessful?</h1>
-
-      <form class="form" action="../v2/dpgen-incomplete" method="post">
+      <h1 class="govuk-heading-l">Has the payment been reissued?</h1>
+      <form class="form" action="../v2/case-list-success4" method="post">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
-            <div class="govuk-radios" data-module="govuk-radios">
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="contact-1" name="contact" type="radio" value="DpGen" data-aria-controls="conditional-contact-2">
-                    <label class="govuk-label govuk-radios__label" for="contact-2">
-                      Citizen returned DpGen but details were incomplete
-                    </label>
-                  </div>
-                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
-                    <div class="govuk-form-group">
-                      <label class="govuk-label" for="contact-by-phone">
-                        Input returned DpGen batch number
-                      </label>
-                      <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" autocomplete="tel">
-                    </div>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="call" data-aria-controls="conditional-contact-3">
-                    <label class="govuk-label govuk-radios__label" for="contact-3">
-                      Citizen called but could not provide valid bank details
-                    </label>
-                  </div>
-            </div>
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+
+              <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changed-name" name="redirectUrl" type="radio" value="../v2/payment-reissued-abank">
+                  <label class="govuk-label govuk-radios__label" for="changed-name">
+                    Yes
+                    <div id="with-hint-hint" class="govuk-hint">The case will be closed (no further action needed).</div>
+
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changed-name-2" name="redirectUrl" type="radio" value="../v2/history-success">
+                  <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                    No
+                  <div id="with-hint-hint" class="govuk-hint">The case will be added to the 'additional action cases'.</div>
+                  </label>
+                </div>
+              </div>
 
           </fieldset>
         </div>
@@ -103,7 +102,5 @@
 
     </div>
   </div>
-
-
 
 {% endblock %}
